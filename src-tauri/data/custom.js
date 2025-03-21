@@ -32,21 +32,22 @@ setTimeout(() => {
     // 刷新当前页面
     location.reload();
 }, refreshInterval);
-// 用于存储已经打开的窗口
-const openedWindows = {};
+//
+javascript const openedWindows = {};
+function openUniqueCurrentWindow (windowName) {
+// 自动获取当前页面的 URL
+const currentUrl = window.location.href;
 
-function openUniqueWindow(url, windowName) {
-    // 检查该窗口是否已经打开
-    if (openedWindows[windowName] &&!openedWindows[windowName].closed) {
-        // 如果已经打开且未关闭，则将其聚焦
-        openedWindows[windowName].focus();
-    } else {
-        // 打开新窗口
-        const newWindow = window.open(url, windowName);
-        if (newWindow) {
-            // 存储新打开的窗口
-            openedWindows[windowName] = newWindow;
-        }
-    }
+// 检查该窗口是否已经打开
+if (openedWindows [windowName] && !openedWindows [windowName].closed) {
+// 如果已打开且未关闭，聚焦该窗口
+openedWindows [windowName].focus ();
+} else {
+// 打开新窗口并使用当前 URL
+const newWindow = window.open (currentUrl, windowName);
+if (newWindow) {
+// 存储新打开的窗口
+openedWindows [windowName] = newWindow;
 }
-
+}
+}
