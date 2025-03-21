@@ -11,12 +11,12 @@ pub async fn resolve_setup(app: &mut App) -> Result<(), Error> {
     let config: WindowConfig = serde_json::from_str(window_json).unwrap();
     let window = tauri::WebviewWindowBuilder::from_config(app_handle, &config)
         .unwrap()
-        .initialization_script(include_str!("../../data/jquery.min.js")).initialization_script(include_str!("../../data/custom.js"))
+        .initialization_script(include_str!("../../data/custom.js"))
         .build()
         .unwrap();
 
     // 是否记录窗口位置和大小
-    if true {
+    if false {
         // 获取记录窗口大小
         let store = app.store("app_data.json").unwrap();
 
