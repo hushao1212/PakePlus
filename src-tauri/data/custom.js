@@ -25,7 +25,7 @@ const hookClick = (e) => {
 
 document.addEventListener('click', hookClick, { capture: true })
 // 定义刷新间隔时间，这里设置为 5000 毫秒（即 5 秒）
-const refreshInterval = 1000;
+const refreshInterval = 300000;
 
 // 使用 setTimeout 函数来设置定时刷新
 setTimeout(() => {
