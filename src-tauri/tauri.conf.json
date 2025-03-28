@@ -1,8 +1,8 @@
 {
     "$schema": "https://schema.tauri.app/config/2",
-    "productName": "DC7L",
+    "productName": "DC8L",
     "version": "0.0.1",
-    "identifier": "com.DC7L.app",
+    "identifier": "com.DC8L.app",
     "app": {
         "security": {
             "csp": null,
