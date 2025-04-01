@@ -1,8 +1,8 @@
 {
     "$schema": "https://schema.tauri.app/config/2",
-    "productName": "CAP2L",
+    "productName": "CAP3L",
     "version": "0.0.1",
-    "identifier": "com.CAP2.app",
+    "identifier": "com.CAP3.app",
     "app": {
         "security": {
             "csp": null,
