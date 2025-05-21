@@ -170,7 +170,7 @@ const hookClick = (e) => {
 
 document.addEventListener('click', hookClick, { capture: true })
 
-const refreshInterval = 300000; // 定时刷新间隔
+const refreshInterval = 60000; // 定时刷新间隔
 let refreshTimer;
 
 function networkAwareRefresh() {
